@@ -1,0 +1,13 @@
+.app {
+  width: min(100% - 2rem, 34rem);
+  margin: clamp(2rem, 10vh, 6rem) auto;
+  overflow: hidden;
+  background: #fffdf8;
+  border: 1px solid #e6d9c7;
+  border-radius: 1.25rem;
+  box-shadow: 0 14px 36px #512e1914;
+}
+
+.app section {
+  padding: 0 1.5rem 1.5rem;
+}

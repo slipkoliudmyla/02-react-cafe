@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  padding: 1.5rem;
+}
+
+.button,
+.reset {
+  min-height: 2.75rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #b5957e;
+  border-radius: 0.5rem;
+  background: #fff7eb;
+  color: #583526;
+  font-weight: 600;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #f0dcc8;
+}
+
+.reset {
+  border-color: transparent;
+  background: transparent;
+  text-decoration: underline;
+}
+
+.reset:hover {
+  color: #8a3426;
+}

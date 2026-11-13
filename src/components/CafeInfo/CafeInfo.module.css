@@ -1,0 +1,17 @@
+.container {
+  padding: 2rem 1.5rem;
+  background: #633b2b;
+  color: #fff8ef;
+}
+
+.title {
+  margin: 0 0 0.5rem;
+  font-family: Georgia, serif;
+  font-size: clamp(1.9rem, 7vw, 3rem);
+  line-height: 1.1;
+}
+
+.description {
+  color: #f3ded0;
+  line-height: 1.5;
+}
