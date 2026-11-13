@@ -7,23 +7,31 @@ interface VoteOptionsProps {
   canReset: boolean;
 }
 
-const options: VoteType[] = ['good', 'neutral', 'bad'];
+const options: { value: VoteType; label: string }[] = [
+  { value: 'good', label: 'Good' },
+  { value: 'neutral', label: 'Neutral' },
+  { value: 'bad', label: 'Bad' },
+];
 
 function VoteOptions({ onVote, onReset, canReset }: VoteOptionsProps) {
   return (
     <div className={css.container}>
-      {options.map((option) => (
+      {options.map(({ value, label }) => (
         <button
-          key={option}
+          key={value}
           type="button"
           className={css.button}
-          onClick={() => onVote(option)}
+          onClick={() => onVote(value)}
         >
-          {option}
+          {label}
         </button>
       ))}
       {canReset && (
-        <button type="button" className={css.reset} onClick={onReset}>
+        <button
+          type="button"
+          className={`${css.button} ${css.reset}`}
+          onClick={onReset}
+        >
           Reset
         </button>
       )}

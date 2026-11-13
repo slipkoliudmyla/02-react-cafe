@@ -11,8 +11,8 @@ const initialVotes: Votes = { good: 0, neutral: 0, bad: 0 };
 function App() {
   const [votes, setVotes] = useState<Votes>(initialVotes);
   const totalVotes = votes.good + votes.neutral + votes.bad;
-  const hasVotes = totalVotes > 0;
-  const positiveRate = hasVotes
+  const canReset = totalVotes > 0;
+  const positiveRate = canReset
     ? Math.round((votes.good / totalVotes) * 100)
     : 0;
 
@@ -28,25 +28,23 @@ function App() {
   }
 
   return (
-    <main className={css.app}>
+    <div className={css.app}>
       <CafeInfo />
       <VoteOptions
         onVote={handleVote}
         onReset={resetVotes}
-        canReset={hasVotes}
+        canReset={canReset}
       />
-      <section aria-label="Feedback statistics" aria-live="polite">
-        {hasVotes ? (
-          <VoteStats
-            votes={votes}
-            totalVotes={totalVotes}
-            positiveRate={positiveRate}
-          />
-        ) : (
-          <Notification />
-        )}
-      </section>
-    </main>
+      {canReset ? (
+        <VoteStats
+          votes={votes}
+          totalVotes={totalVotes}
+          positiveRate={positiveRate}
+        />
+      ) : (
+        <Notification />
+      )}
+    </div>
   );
 }
 

@@ -15,4 +15,6 @@ npm run dev
 
 Для перевірки запусти `npm run lint` і `npm run build`.
 
+Стилі компонентів із [репозиторію GoIT](https://github.com/goitacademy/react-cafe-styles).
+
 Адаптовано з [02-react-cafe Софії Дорош](https://github.com/sofiiadorosh/02-react-cafe).

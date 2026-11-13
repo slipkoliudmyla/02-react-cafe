@@ -1,33 +1,35 @@
 .container {
   display: flex;
+  gap: 8px;
   flex-wrap: wrap;
-  gap: 0.65rem;
-  padding: 1.5rem;
 }
 
-.button,
-.reset {
-  min-height: 2.75rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid #b5957e;
-  border-radius: 0.5rem;
-  background: #fff7eb;
-  color: #583526;
-  font-weight: 600;
-  text-transform: capitalize;
+.button {
+  padding: 10px 22px;
+  background-color: #0a66c2;
+  color: #fff;
+  border: 1px solid #0a66c2;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
   cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+  min-width: 120px;
 }
 
 .button:hover {
-  background: #f0dcc8;
+  background-color: #004182;
+  border-color: #003060;
 }
 
 .reset {
-  border-color: transparent;
-  background: transparent;
-  text-decoration: underline;
+  background-color: #dc3545;
+  border-color: #dc3545;
 }
 
 .reset:hover {
-  color: #8a3426;
+  background-color: #bb2d3b;
+  border-color: #b02a37;
 }
